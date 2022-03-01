@@ -8,6 +8,7 @@
   "dependencies": {
     "@automapper/classes": "^7.2.1",
     "@automapper/core": "^7.2.1",
+    "@automapper/mikro": "^7.3.10",
     "@mikro-orm/cli": "4.5",
     "@mikro-orm/core": "4.5",
     "@mikro-orm/postgresql": "4.5",

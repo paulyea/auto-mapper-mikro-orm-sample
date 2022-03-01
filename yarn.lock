@@ -3,14 +3,19 @@
 
 
 "@automapper/classes@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@automapper/classes/-/classes-7.2.1.tgz#2833f704879da74a04cb4b1e0d24cb3e84d4c41f"
-  integrity sha512-brK3xqKTyPlUNYm/gcbiSP/uN2c74CTAfjySpyYXYhEHG+FQRq1K7GIO8n2g4L30Mj9vpcl2oVfAy4N/NK+7og==
+  version "7.3.10"
+  resolved "https://registry.yarnpkg.com/@automapper/classes/-/classes-7.3.10.tgz#975e77490469ac79dd4625348a6006bb7e8b6b84"
+  integrity sha512-gLLPcZK+Oh+zBOmOuB9E+8nLAOqAP9BxV9QxVQ/nhlYuxwFgZXkuL+54vjUdZKq5FSbRxy9TXgQPcIbVzlRzvQ==
 
 "@automapper/core@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@automapper/core/-/core-7.2.1.tgz#2a1b67e25f9ca79b433e39700e5681ccfff49cdf"
-  integrity sha512-G3RSPjQ/V8nWyxTDjnp68GkGmttbJHaAMJ4t6y7MQuoVTNnt7RCjvuo204ypPvbtyQ8nVVfgcQC0OQtX/YOGdw==
+  version "7.3.10"
+  resolved "https://registry.yarnpkg.com/@automapper/core/-/core-7.3.10.tgz#6f63151168a40fda849fb35bced293dae2ddefbf"
+  integrity sha512-hX0VWs2/BRfVEZtOmKwCozuTqOFMInkPkFLjXqKfllfBSSTOyZGypTmPvdfTguqYOT2xbvWOFWUS3elKra1eZA==
+
+"@automapper/mikro@^7.3.10":
+  version "7.3.10"
+  resolved "https://registry.yarnpkg.com/@automapper/mikro/-/mikro-7.3.10.tgz#174d15723746083cdfc23cd0d7ae0b4a4a969e24"
+  integrity sha512-bOYISJlT49DoQRYN2odIPADUZ0XUd7Zv5lzIQL3YW+wB5j8pI56XGLuVghfZXmLDdH6wYrSNiytXTRku+sxe5A==
 
 "@cspotcode/source-map-consumer@0.8.0":
   version "0.8.0"
@@ -149,9 +154,9 @@
   integrity sha1-7ihweulOEdK4J7y+UnC86n8+ce4=
 
 "@types/lodash@*":
-  version "4.14.178"
-  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.178.tgz#341f6d2247db528d4a13ddbb374bcdc80406f4f8"
-  integrity sha512-0d5Wd09ItQWH1qFbEyQ7oTQ3GZrMfth5JkbN3EvTKLXcHLRDSXeLnlvlOn0wvxVIwK5o2M8JzP/OWz7T3NRsbw==
+  version "4.14.179"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.179.tgz#490ec3288088c91295780237d2497a3aa9dfb5c5"
+  integrity sha512-uwc1x90yCKqGcIOAT6DwOSuxnrAbpkdPsUOZtwrXb4D/6wZs+6qG7QnIawDuZWg0sWpxl+ltIKCaLoMlna678w==
 
 "@types/mongodb@*":
   version "4.0.7"
@@ -1179,9 +1184,9 @@ mixin-deep@^1.2.0:
     is-extendable "^1.0.1"
 
 mongodb-connection-string-url@^2.4.1:
-  version "2.5.1"
-  resolved "https://registry.yarnpkg.com/mongodb-connection-string-url/-/mongodb-connection-string-url-2.5.1.tgz#6ac33906256b182761b141addf7c64e56b0ed4d1"
-  integrity sha512-0GAJKc1LBXzlWPhtj9uGawIlYSkTXkgpW9wZ97b4ySEuKbE5j9a0OdLGM31AWMhRS2ut49Z0kufSYsamGEIb8Q==
+  version "2.5.2"
+  resolved "https://registry.yarnpkg.com/mongodb-connection-string-url/-/mongodb-connection-string-url-2.5.2.tgz#f075c8d529e8d3916386018b8a396aed4f16e5ed"
+  integrity sha512-tWDyIG8cQlI5k3skB6ywaEA5F9f5OntrKKsT/Lteub2zgwSUlhqEN2inGgBTm8bpYJf8QYBdA/5naz65XDpczA==
   dependencies:
     "@types/whatwg-url" "^8.2.1"
     whatwg-url "^11.0.0"
@@ -1746,9 +1751,9 @@ tr46@^3.0.0:
     punycode "^2.1.1"
 
 ts-node@^10.5.0:
-  version "10.5.0"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.5.0.tgz#618bef5854c1fbbedf5e31465cbb224a1d524ef9"
-  integrity sha512-6kEJKwVxAJ35W4akuiysfKwKmjkbYxwQMTBaAxo9KKAx/Yd26mPUyhGz3ji+EsJoAgrLqVsYHNuuYwQe22lbtw==
+  version "10.6.0"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-10.6.0.tgz#c3f4195d5173ce3affdc8f2fd2e9a7ac8de5376a"
+  integrity sha512-CJen6+dfOXolxudBQXnVjRVvYTmTWbyz7cn+xq2XTsvnaXbHqr4gXSCNbS2Jj8yTZMuGwUoBESLaOkLascVVvg==
   dependencies:
     "@cspotcode/source-map-support" "0.7.0"
     "@tsconfig/node10" "^1.0.7"
@@ -1780,9 +1785,9 @@ tslib@^2.3.1:
   integrity sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==
 
 typescript@^4.5.5:
-  version "4.5.5"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.5.5.tgz#d8c953832d28924a9e3d37c73d729c846c5896f3"
-  integrity sha512-TCTIul70LyWe6IJWT8QSYeA54WQe8EjQFU4wY52Fasj5UKx88LNYKCgBEHcOMOrFF1rKGbD8v/xcNWVUq9SymA==
+  version "4.6.2"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.6.2.tgz#fe12d2727b708f4eef40f51598b3398baa9611d4"
+  integrity sha512-HM/hFigTBHZhLXshn9sN37H085+hQGeJHJ/X7LpBWLID/fbc2acUMfU+lGD98X81sKP+pFa9f0DZmCwB9GnbAg==
 
 umzug@2.3.0:
   version "2.3.0"

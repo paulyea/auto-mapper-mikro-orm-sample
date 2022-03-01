@@ -1,13 +1,17 @@
-import { AutoMap, classes } from "@automapper/classes";
+import { AutoMap } from "@automapper/classes";
 import { CamelCaseNamingConvention, createMapper } from "@automapper/core";
-import { Entity, IdentifiedReference, MikroORM, OneToOne, PrimaryKey, Property } from "@mikro-orm/core";
+import { mikro } from '@automapper/mikro';
+import { AnyEntity, Entity, IdentifiedReference, MikroORM, OneToOne, PrimaryKey, Property } from "@mikro-orm/core";
 import { PostgreSqlDriver } from "@mikro-orm/postgresql";
 
-@Entity()
-export class Author {
+export abstract class Base<T extends AnyEntity<T>> {
   @PrimaryKey()
+  @AutoMap()
   id: number;
-  
+}
+
+@Entity()
+export class Author extends Base<Author> { 
   @OneToOne(() => Book, (book) => book.author, {
     wrappedReference: true
   })
@@ -20,15 +24,12 @@ export class Author {
 }
 
 @Entity()
-export class Book {
-  @PrimaryKey()
-  id: number;
-  
+export class Book extends Base<Book> {
   @OneToOne(()=> Author, (author) => author.book, {
     owner: true,
     wrappedReference: true,
   })
-  @AutoMap({typeFn: () => Author})
+  @AutoMap({ typeFn: () => Author })
   author: IdentifiedReference<Author>;
 
   @Property()
@@ -38,12 +39,15 @@ export class Book {
 
 class AuthorDto {
   @AutoMap()
+  id: number;
+  
+  @AutoMap()
   name: string;
 }
 
 class BookDto {
-  @AutoMap({ typeFn: () => AuthorDto})
-  author: AuthorDto
+  @AutoMap()
+  author: AuthorDto;
 
   @AutoMap()
   name: string;
@@ -58,15 +62,17 @@ const main = async () => {
   
   const mapper = createMapper({
     name: 'singleton-mapper',
-    pluginInitializer: classes,
+    pluginInitializer: mikro(),
     namingConventions: new CamelCaseNamingConvention(),
   });
 
   try {
-    mapper.createMap(Author, AuthorDto);
+    mapper.createMap(Author, AuthorDto)
     mapper.createMap(Book, BookDto)
 
-    const book = orm.em.create(Book, {id: 123, name: "John Doe"})
+    const author = orm.em.create(Author, {id: 1234, name: "asdf"});
+    
+    const book = orm.em.create(Book, {id: 123, name: "John Doe", author});
     const bookDto = mapper.map(book, BookDto, Book);
 
     console.log(bookDto);
